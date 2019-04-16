@@ -10,7 +10,7 @@ class Accueil extends React.Component{
                     <Grid className="landing-grid">
                         <Cell col={12}>
                             <img
-                                src="http://static8.viadeo-static.com/U28JbPfFgrqJkWe0kfkejYjgPIg=/300x300/member/00226tpsxx4e2qq9%3Fts%3D1467709182000"
+                                src="https://cdn.juleswebb.com/pgs/creativica_sitting-avatar.svg"
                                 alt="avatar"
                              className="avatar-img"
                             />

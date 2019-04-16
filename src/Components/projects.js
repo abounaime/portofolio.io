@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Tabs, Tab} from 'react-mdl';
+import {Tabs, Tab, Grid, Cell, Card, CardTitle,CardText,  CardActions, CardMenu, Button, IconButton} from 'react-mdl';
 class Projects extends Component{
     constructor(){
         super();
@@ -10,8 +10,55 @@ class Projects extends Component{
     toogleCategories(){
         if(this.state.activeTab === 0){
             return(
-                <div>
-                    <h1> this is react</h1>
+                <div className="projects-grid">
+                    <Card shadow={5} style = {{minWidth:'450', margin:'auto'}}>
+                        <CardTitle style={{color: 'black', height: '170px',
+                            background : 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png) center / cover'}}>
+                            React Project #1                     </CardTitle>
+
+                        <CardText>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industryndard dummy text ever since the 1500s                        </CardText>
+                            <CardActions border>
+                                <Button colored> GitHub</Button>
+                                <Button colored> CodePen</Button>
+                                <Button colored> LiveDemo</Button>
+                            </CardActions>
+                        <CardMenu style={{color : '#fff'}}>
+                            <IconButton name="share"/>
+                        </CardMenu>
+                    </Card>
+                    <Card shadow={5} style = {{minWidth:'450', margin:'auto'}}>
+                        <CardTitle style={{color: 'black', height: '170px',
+                            background : 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png) center / cover'}}>
+                            React Project #1                     </CardTitle>
+
+                        <CardText>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industryndard dummy text ever since the 1500s                        </CardText>
+                        <CardActions border>
+                            <Button colored> GitHub</Button>
+                            <Button colored> CodePen</Button>
+                            <Button colored> LiveDemo</Button>
+                        </CardActions>
+                        <CardMenu style={{color : '#fff'}}>
+                            <IconButton name="share"/>
+                        </CardMenu>
+                    </Card>
+                    <Card shadow={5} style = {{minWidth:'450', margin:'auto'}}>
+                        <CardTitle style={{color: 'black', height: '170px',
+                            background : 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png) center / cover'}}>
+                            React Project #1                     </CardTitle>
+
+                        <CardText>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industryndard dummy text ever since the 1500s                        </CardText>
+                        <CardActions border>
+                            <Button colored> GitHub</Button>
+                            <Button colored> CodePen</Button>
+                            <Button colored> LiveDemo</Button>
+                        </CardActions>
+                        <CardMenu style={{color : '#fff'}}>
+                            <IconButton name="share"/>
+                        </CardMenu>
+                    </Card>
                 </div>
             )
         } else if (this.state.activeTab === 1){
@@ -45,7 +92,12 @@ class Projects extends Component{
                 <Tab> JEE </Tab>
             </Tabs>
             <section className="Projects-grid">
-                {this.toogleCategories()}
+                <Grid >
+                    <Cell col={12}>
+                        <div className="content">{this.toogleCategories()}</div>
+                    </Cell>
+                </Grid>
+
             </section>
         </div>
         )
