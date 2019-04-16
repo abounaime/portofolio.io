@@ -74,3 +74,19 @@
   justify-content: center;
   position-top: 2em ;
 }
+.contact-grid h2 {
+  font-family: 'Anton', sans-serif;
+}
+.contact-grid p {
+  font-family: 'Oxygen', sans-serif;
+  font-weight: bold;
+}
+.contact-grid hr {
+  border-top: 5px dotted black;
+  width: 50%;
+  margin: auto;
+}
+.contact-list i{
+  font-size: 66px;
+  padding-right: 5rem;
+}
