@@ -1,9 +1,71 @@
 import React, { Component } from "react";
-
+import {Cell, Grid} from "react-mdl";
+import Education from "./education"
+import Experience from "./experience"
 class Resume extends Component{
     render() {
         return(
-            <h1> resume Page </h1>
+            <div>
+                <Grid>
+                    <Cell col={4}>
+                        <div style={{textAllign: 'center'}}>
+                            <img
+                            src="https://www.shareicon.net/download/2015/09/18/103157_man_512x512.png"
+                            alt="avatar"
+                            style={{height: '200px'}}/>
+
+                        </div>
+                        <h2 style={{paddingTop: '2em'}}> Abdeljalil Bounaime</h2>
+                        <h4 style={{color : 'grey'}}> Programmer</h4>
+                        <hr style={{borderTop : '3px solid #833fb2' , width:'50%'}}/>
+                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining esse</p>
+                        <hr style={{borderTop : '3px solid #833fb2' , width:'50%'}}/>
+                        <h5>Adress</h5>
+                        <p>13 route de la loire, 44330</p>
+                        <h5>Phone</h5>
+                        <p>(0033) 659-75-88-56</p>
+                        <h5>Email</h5>
+                        <p>a.bounaime@gmail.com</p>
+                        <h5>Web</h5>
+                        <p>myWebstite.com</p>
+                        <hr style={{borderTop : '3px solid #833fb2' , width:'50%'}}/>
+                    </Cell>
+                    <Cell className="resume-right-col" col={8}>
+                        <h2>Education</h2>
+
+                        <Education
+                        startYear = "2009"
+                        endYear = "2014"
+                        schoolName = "IGA"
+                        schoolDescription= "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+
+                        />
+                        <Education
+                            startYear = "2015"
+                            endYear = "2017"
+                            schoolName = "UBO"
+                            schoolDescription= "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+
+                        />
+                        <hr style={{borderTop : '3px solid #e22947'}}/>
+                        <h2>Experience</h2>
+                        <Experience
+                            startYear = "2018"
+                            endYear = "Now"
+                            jobName = "ATOS"
+                            jobDescription= "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+
+                        />
+                        <Experience
+                            startYear = "2018"
+                            endYear = "Now"
+                            jobName = "ATOS"
+                            jobDescription= "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+
+                        />
+                    </Cell>
+                </Grid>
+            </div>
         )
     }
 }
